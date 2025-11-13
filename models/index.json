@@ -1,0 +1,274 @@
+{
+  "global": {
+    "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer.joblib",
+    "rows": 23789,
+    "method": "sigmoid",
+    "cv_auc": 0.7411394822269415
+  },
+  "franchises": {
+    "Baldur's Gate 3": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__baldur-s-gate-3.joblib",
+      "rows": 179,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Baldur's Gate 3",
+      "slug": "baldur-s-gate-3"
+    },
+    "Battlefield 6": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__battlefield-6.joblib",
+      "rows": 223,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Battlefield 6",
+      "slug": "battlefield-6"
+    },
+    "Borderlands 4": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__borderlands-4.joblib",
+      "rows": 294,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Borderlands 4",
+      "slug": "borderlands-4"
+    },
+    "Boruto": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__boruto.joblib",
+      "rows": 254,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Boruto",
+      "slug": "boruto"
+    },
+    "Clair Obscur: Expedition 33": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__clair-obscur-expedition-33.joblib",
+      "rows": 232,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Clair Obscur: Expedition 33",
+      "slug": "clair-obscur-expedition-33"
+    },
+    "Demon Slayer": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__demon-slayer.joblib",
+      "rows": 241,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Demon Slayer",
+      "slug": "demon-slayer"
+    },
+    "Destiny 2": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__destiny-2.joblib",
+      "rows": 172,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Destiny 2",
+      "slug": "destiny-2"
+    },
+    "Diablo 4": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__diablo-4.joblib",
+      "rows": 219,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Diablo 4",
+      "slug": "diablo-4"
+    },
+    "Elden Ring Nightreign": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__elden-ring-nightreign.joblib",
+      "rows": 206,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Elden Ring Nightreign",
+      "slug": "elden-ring-nightreign"
+    },
+    "Fortnite": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__fortnite.joblib",
+      "rows": 300,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "Fortnite",
+      "slug": "fortnite"
+    },
+    "Genshin Impact": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__genshin-impact.joblib",
+      "rows": 215,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Genshin Impact",
+      "slug": "genshin-impact"
+    },
+    "Grand Theft Auto 6": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__grand-theft-auto-6.joblib",
+      "rows": 214,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Grand Theft Auto 6",
+      "slug": "grand-theft-auto-6"
+    },
+    "Helldivers 2": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__helldivers-2.joblib",
+      "rows": 212,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Helldivers 2",
+      "slug": "helldivers-2"
+    },
+    "Hollow Knight: Silksong": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__hollow-knight-silksong.joblib",
+      "rows": 159,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Hollow Knight: Silksong",
+      "slug": "hollow-knight-silksong"
+    },
+    "Horror": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__horror.joblib",
+      "rows": 216,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Horror",
+      "slug": "horror"
+    },
+    "Jujutsu Kaisen": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__jujutsu-kaisen.joblib",
+      "rows": 156,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Jujutsu Kaisen",
+      "slug": "jujutsu-kaisen"
+    },
+    "Mario Kart World": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__mario-kart-world.joblib",
+      "rows": 156,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Mario Kart World",
+      "slug": "mario-kart-world"
+    },
+    "Marvel Rivals": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__marvel-rivals.joblib",
+      "rows": 357,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "Marvel Rivals",
+      "slug": "marvel-rivals"
+    },
+    "My Hero Academia": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__my-hero-academia.joblib",
+      "rows": 346,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "My Hero Academia",
+      "slug": "my-hero-academia"
+    },
+    "Naruto": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__naruto.joblib",
+      "rows": 158,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Naruto",
+      "slug": "naruto"
+    },
+    "Nintendo Switch 2": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__nintendo-switch-2.joblib",
+      "rows": 400,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "Nintendo Switch 2",
+      "slug": "nintendo-switch-2"
+    },
+    "One Piece": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__one-piece.joblib",
+      "rows": 1350,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "One Piece",
+      "slug": "one-piece"
+    },
+    "Open-World": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__open-world.joblib",
+      "rows": 449,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "Open-World",
+      "slug": "open-world"
+    },
+    "Overwatch 2": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__overwatch-2.joblib",
+      "rows": 168,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Overwatch 2",
+      "slug": "overwatch-2"
+    },
+    "Pokemon": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__pokemon.joblib",
+      "rows": 218,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Pokemon",
+      "slug": "pokemon"
+    },
+    "Pokemon Trading Card Game Pocket": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__pokemon-trading-card-game-pocket.joblib",
+      "rows": 208,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Pokemon Trading Card Game Pocket",
+      "slug": "pokemon-trading-card-game-pocket"
+    },
+    "Pokémon GO": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__pokémon-go.joblib",
+      "rows": 161,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Pokémon GO",
+      "slug": "pokémon-go"
+    },
+    "RPG": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__rpg.joblib",
+      "rows": 194,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "RPG",
+      "slug": "rpg"
+    },
+    "Solo Leveling": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__solo-leveling.joblib",
+      "rows": 486,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "Solo Leveling",
+      "slug": "solo-leveling"
+    },
+    "Steam": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__steam.joblib",
+      "rows": 154,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Steam",
+      "slug": "steam"
+    },
+    "The Elder Scrolls IV: Oblivion Remastered": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__the-elder-scrolls-iv-oblivion-remastered.joblib",
+      "rows": 347,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "The Elder Scrolls IV: Oblivion Remastered",
+      "slug": "the-elder-scrolls-iv-oblivion-remastered"
+    },
+    "Xbox Game Pass": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__xbox-game-pass.joblib",
+      "rows": 202,
+      "method": "sigmoid",
+      "cv_auc": null,
+      "franchise": "Xbox Game Pass",
+      "slug": "xbox-game-pass"
+    },
+    "nan": {
+      "path": "/Users/Gaetano/Desktop/discover-title-lab/models/title_scorer__nan.joblib",
+      "rows": 1022,
+      "method": "isotonic",
+      "cv_auc": null,
+      "franchise": "nan",
+      "slug": "nan"
+    }
+  }
+}
