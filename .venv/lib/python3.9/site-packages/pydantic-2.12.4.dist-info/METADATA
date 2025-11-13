@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: pydantic
-Version: 2.12.3
+Version: 2.12.4
 Summary: Data validation using Python type hints
 Project-URL: Homepage, https://github.com/pydantic/pydantic
 Project-URL: Documentation, https://docs.pydantic.dev
@@ -31,7 +31,7 @@ Classifier: Topic :: Internet
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Requires-Python: >=3.9
 Requires-Dist: annotated-types>=0.6.0
-Requires-Dist: pydantic-core==2.41.4
+Requires-Dist: pydantic-core==2.41.5
 Requires-Dist: typing-extensions>=4.14.1
 Requires-Dist: typing-inspection>=0.4.2
 Provides-Extra: email
@@ -117,13 +117,44 @@ See our [security policy](https://github.com/pydantic/pydantic/security/policy).
 <!-- markdownlint-disable descriptive-link-text -->
 <!-- markdownlint-disable-next-line first-line-heading -->
 
+## v2.12.4 (2025-11-05)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.12.4)
+
+This is the fourth 2.12 patch release, fixing more regressions, and reverting a change in the `build()` method
+of the [`AnyUrl` and Dsn types](https://docs.pydantic.dev/latest/api/networks/).
+
+This patch release also fixes an issue with the serialization of IP address types, when `serialize_as_any` is used. The next patch release
+will try to address the remaining issues with *serialize as any* behavior by introducing a new *polymorphic serialization* feature, that
+should be used in most cases in place of *serialize as any*.
+
+* Fix issue with forward references in parent `TypedDict` classes by [@Viicos](https://github.com/Viicos) in [#12427](https://github.com/pydantic/pydantic/pull/12427).
+
+    This issue is only relevant on Python 3.14 and greater.
+* Exclude fields with `exclude_if` from JSON Schema required fields by [@Viicos](https://github.com/Viicos) in [#12430](https://github.com/pydantic/pydantic/pull/12430)
+* Revert URL percent-encoding of credentials in the `build()` method
+  of the [`AnyUrl` and Dsn types](https://docs.pydantic.dev/latest/api/networks/) by [@davidhewitt](https://github.com/davidhewitt) in
+  [pydantic-core#1833](https://github.com/pydantic/pydantic-core/pull/1833).
+
+    This was initially considered as a bugfix, but caused regressions and as such was fully reverted. The next release will include
+    an opt-in option to percent-encode components of the URL.
+* Add type inference for IP address types by [@davidhewitt](https://github.com/davidhewitt) in [pydantic-core#1868](https://github.com/pydantic/pydantic-core/pull/1868).
+
+    The 2.12 changes to the `serialize_as_any` behavior made it so that IP address types could not properly serialize to JSON.
+* Avoid getting default values from defaultdict by [@davidhewitt](https://github.com/davidhewitt) in [pydantic-core#1853](https://github.com/pydantic/pydantic-core/pull/1853).
+
+    This fixes a subtle regression in the validation behavior of the [`collections.defaultdict`](https://docs.python.org/3/library/collections.html#collections.defaultdict)
+    type.
+* Fix issue with field serializers on nested typed dictionaries by [@davidhewitt](https://github.com/davidhewitt) in [pydantic-core#1879](https://github.com/pydantic/pydantic-core/pull/1879).
+* Add more `pydantic-core` builds for the three-threaded version of Python 3.14 by [@davidhewitt](https://github.com/davidhewitt) in [pydantic-core#1864](https://github.com/pydantic/pydantic-core/pull/1864).
+
 ## v2.12.3 (2025-10-17)
 
 [GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.12.3)
 
 ### What's Changed
 
-This is the third 2.13 patch release, fixing issues related to the `FieldInfo` class, and reverting a change to the supported
+This is the third 2.12 patch release, fixing issues related to the `FieldInfo` class, and reverting a change to the supported
 [*after* model validator](https://docs.pydantic.dev/latest/concepts/validators/#model-validators) function signatures.
 
 * Raise a warning when an invalid after model validator function signature is raised by [@Viicos](https://github.com/Viicos) in [#12414](https://github.com/pydantic/pydantic/pull/12414).
@@ -134,11 +165,6 @@ This is the third 2.13 patch release, fixing issues related to the `FieldInfo` c
   *not* a supported pattern. Instead, please refer to the [added example](https://docs.pydantic.dev/latest/examples/dynamic_models/) in the documentation.
 
 The [blog post](https://pydantic.dev/articles/pydantic-v2-12-release#changes) section on changes was also updated to document the changes related to `serialize_as_any`.
-
-#### Fixes
-
-* Release a new `pydantic-core` version, as a corrupted CPython 3.10 `manylinux2014_aarch64` wheel got uploaded ([pydantic-core#1843](https://github.com/pydantic/pydantic-core/pull/1843)).
-* Fix issue with recursive generic models with a parent model class by [@Viicos](https://github.com/Viicos) in [#12398](https://github.com/pydantic/pydantic/pull/12398)
 
 ## v2.12.2 (2025-10-14)
 
