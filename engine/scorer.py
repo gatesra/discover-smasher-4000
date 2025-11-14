@@ -14,6 +14,9 @@ import re
 import joblib
 import numpy as np
 import pandas as pd
+import joblib
+import traceback
+import streamlit as st
 from typing import List, Dict, Any
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -23,6 +26,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.model_selection import cross_val_score, StratifiedKFold
+from sklearn.compose import _column_transformer as _ct  # compat shim target
 
 # ----------------------------
 # Paths & constants
@@ -186,6 +190,24 @@ def _ensure_model_dir():
 
 
 # ----------------------------
+# Sklearn compatibility shim
+# ----------------------------
+def _ensure_sklearn_compat():
+    """
+    Compatibility shim for older pickled sklearn ColumnTransformer objects that
+    expect a private helper class `_RemainderColsList` which may not exist in
+    the current sklearn build.
+
+    We define a minimal stand-in so joblib/pickle can resolve the reference.
+    """
+    if not hasattr(_ct, "_RemainderColsList"):
+        class _RemainderColsList(list):
+            """Minimal stand-in used only for unpickling legacy models."""
+            pass
+        _ct._RemainderColsList = _RemainderColsList
+
+
+# ----------------------------
 # Public API
 # ----------------------------
 def train_local_model() -> Dict[str, Any]:
@@ -232,11 +254,9 @@ def train_local_model() -> Dict[str, Any]:
     }
 
 
-import joblib
-import traceback
-import streamlit as st
-
 def _load_model():
+    # Ensure sklearn has the compatibility shim before unpickling
+    _ensure_sklearn_compat()
     try:
         return joblib.load(MODEL_PATH)
     except Exception as e:
