@@ -232,13 +232,18 @@ def train_local_model() -> Dict[str, Any]:
     }
 
 
+import joblib
+import traceback
+import streamlit as st
+
 def _load_model():
-    if not os.path.exists(MODEL_PATH):
-        raise FileNotFoundError(
-            f"Model not found at {MODEL_PATH}. Train it first:\n"
-            f"(.venv) python -c \"from engine.scorer import train_local_model; print(train_local_model())\""
-        )
-    return joblib.load(MODEL_PATH)
+    try:
+        return joblib.load(MODEL_PATH)
+    except Exception as e:
+        # Show the REAL error in the Streamlit UI
+        st.error(f"Model load failed: {repr(e)}")
+        st.code(traceback.format_exc())
+        raise
 
 
 def score_candidates(candidates: List[Dict[str, str]]) -> pd.DataFrame:
